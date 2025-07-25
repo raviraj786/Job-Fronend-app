@@ -21,7 +21,7 @@ const JobCard: React.FC<Props> = ({ job }) => {
           <AntDesign name="facebook-square" size={24} color="black" />
 
           <View>
-            <Text style={styles.title}>{job?.jobtitle}</Text>
+            <Text style={styles.title}>{job?.jobtitle.slice(0,20)}</Text>
             <Text style={styles.subtitle}>{job?.company}</Text>
           </View>
           <MaterialCommunityIcons
@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     textTransform: "capitalize",
     fontFamily: "JosefinSans-Bold",
+    
   },
   subtitle: {
     color: "#596575",
